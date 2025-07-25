@@ -13,6 +13,7 @@ import storeRoutes from './routes/stores';
 import productRoutes from './routes/products';
 import webhookRoutes from './routes/webhooks';
 import notificationRoutes from './routes/notifications';
+import adminRoutes from './routes/admin';
 
 dotenv.config();
 
@@ -46,6 +47,7 @@ app.use('/api/stores', storeRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/promotions', notificationRoutes);
 app.use('/api/webhooks', webhookRoutes);
+app.use('/api/admin', adminRoutes);
 
 app.use(errorHandler);
 

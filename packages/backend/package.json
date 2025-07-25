@@ -10,7 +10,8 @@
     "test": "jest",
     "migrate": "npx prisma migrate dev",
     "generate": "npx prisma generate",
-    "seed": "ts-node src/scripts/seed.ts"
+    "seed": "ts-node src/scripts/seed.ts",
+    "add-store": "ts-node src/scripts/add-store.ts"
   },
   "dependencies": {
     "@shopify/shopify-api": "^10.0.0",
