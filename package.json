@@ -1,0 +1,26 @@
+{
+  "name": "shopify-marketplace-mvp",
+  "version": "1.0.0",
+  "description": "MVP for multi-store Shopify marketplace mobile app",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:app && npm run install:backend",
+    "install:app": "cd packages/mobile-app && npm install",
+    "install:backend": "cd packages/backend && npm install",
+    "dev:app": "cd packages/mobile-app && npm start",
+    "dev:backend": "cd packages/backend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:app\"",
+    "build:app": "cd packages/mobile-app && npm run build",
+    "build:backend": "cd packages/backend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
